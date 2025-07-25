@@ -1,5 +1,6 @@
 package com.uiplayground.automation.pages.base;
 
+import com.uiplayground.automation.annotations.ElementName;
 import com.uiplayground.automation.core.config.ConfigManager;
 import com.uiplayground.automation.core.driver.DriverManager;
 import org.apache.logging.log4j.LogManager;
@@ -8,44 +9,98 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import java.lang.reflect.Field;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Base class for all Page Objects
  * Provides common functionality for interacting with web elements
  */
 public abstract class BasePage {
-    
+
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected final Logger logger = LogManager.getLogger(this.getClass());
-    
+    private final Map<WebElement, String> elementNameCache = new HashMap<>();
+
     /**
      * Constructor initializes WebDriver, WebDriverWait, and PageFactory
      */
     public BasePage() {
         this.driver = DriverManager.getDriver();
-        this.wait = new WebDriverWait(driver, 
+        this.wait = new WebDriverWait(driver,
                 Duration.ofSeconds(ConfigManager.getInstance().getExplicitWait()));
         PageFactory.initElements(driver, this);
+        cacheElementNames(); // Cache element names once
         logger.debug("Initialized page: " + this.getClass().getSimpleName());
     }
-    
+
+    /**
+     * Cache element names once during page initialization
+     */
+    private void cacheElementNames() {
+        Field[] fields = this.getClass().getDeclaredFields();
+        for (Field field : fields) {
+            try {
+                field.setAccessible(true);
+                
+                // Handle single WebElement
+                if (field.getType() == WebElement.class) {
+                    WebElement element = (WebElement) field.get(this);
+                    if (element != null) {
+                        cacheElementName(element, field);
+                    }
+                }
+                // Handle List<WebElement>
+                else if (List.class.isAssignableFrom(field.getType())) {
+                    Object fieldValue = field.get(this);
+                    if (fieldValue instanceof List) {
+                        List<?> list = (List<?>) fieldValue;
+                        if (!list.isEmpty() && list.get(0) instanceof WebElement) {
+                            // For lists, we'll cache a generic name since individual elements 
+                            // in the list will be handled differently
+                            ElementName annotation = field.getAnnotation(ElementName.class);
+                            String baseName = annotation != null ? annotation.value() : field.getName();
+                            // Individual list elements will use this base name + index if needed
+                        }
+                    }
+                }
+            } catch (Exception e) {
+                logger.debug("Could not cache element name for field: " + field.getName(), e);
+            }
+        }
+    }
+
+    /**
+     * Cache individual element name
+     */
+    private void cacheElementName(WebElement element, Field field) {
+        ElementName annotation = field.getAnnotation(ElementName.class);
+        String name = annotation != null ? annotation.value() : field.getName();
+        elementNameCache.put(element, name);
+    }
+    /**
+     * Get cached element name
+     */
+    protected String getElementName(WebElement element) {
+        return elementNameCache.getOrDefault(element, "Unknown Element");
+    }
     /**
      * Navigate to a URL
-     * @param url URL to navigate to
      */
     protected void navigateTo(String url) {
         driver.get(url);
         logger.info("Navigated to URL: " + url);
     }
-    
+
     /**
-     * Click on an element with logging and highlighting
-     * @param element Element to click
-     * @param elementName Name of the element for logging
+     * Click on an element with automatic name resolution
      */
-    protected void click(WebElement element, String elementName) {
+    protected void click(WebElement element) {
+        String elementName = getElementName(element);
         try {
             waitForElementClickable(element);
             highlightElement(element);
@@ -56,14 +111,11 @@ public abstract class BasePage {
             throw e;
         }
     }
-    
     /**
      * Enter text into an input field
-     * @param element Element to enter text into
-     * @param text Text to enter
-     * @param elementName Name of the element for logging
      */
-    protected void sendText(WebElement element, String text, String elementName) {
+    protected void sendText(WebElement element, String text) {
+        String elementName = getElementName(element);
         try {
             waitForElementVisible(element);
             highlightElement(element);
@@ -75,14 +127,12 @@ public abstract class BasePage {
             throw e;
         }
     }
-    
+
     /**
      * Get text from an element
-     * @param element Element to get text from
-     * @param elementName Name of the element for logging
-     * @return The text content of the element
      */
-    protected String getText(WebElement element, String elementName) {
+    protected String getText(WebElement element) {
+        String elementName = getElementName(element);
         try {
             waitForElementVisible(element);
             highlightElement(element);
@@ -94,26 +144,23 @@ public abstract class BasePage {
             throw e;
         }
     }
-    
+
     /**
      * Wait for an element to be visible
-     * @param element Element to wait for
      */
     protected void waitForElementVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    
+
     /**
      * Wait for an element to be clickable
-     * @param element Element to wait for
      */
     protected void waitForElementClickable(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
-    
+
     /**
      * Highlight an element by changing its border style
-     * @param element Element to highlight
      */
     protected void highlightElement(WebElement element) {
         if (driver instanceof JavascriptExecutor) {
@@ -121,14 +168,12 @@ public abstract class BasePage {
             js.executeScript("arguments[0].style.border='2px solid red'", element);
         }
     }
-    
+
     /**
      * Check if an element is displayed
-     * @param element Element to check
-     * @param elementName Name of the element for logging
-     * @return true if the element is displayed, false otherwise
      */
-    protected boolean isElementDisplayed(WebElement element, String elementName) {
+    protected boolean isElementDisplayed(WebElement element) {
+        String elementName = getElementName(element);
         try {
             boolean isDisplayed = element.isDisplayed();
             logger.info(elementName + " is displayed: " + isDisplayed);
@@ -138,12 +183,9 @@ public abstract class BasePage {
             return false;
         }
     }
-    
+
     /**
      * Execute JavaScript
-     * @param script JavaScript to execute
-     * @param args Arguments for the script
-     * @return Result of the script execution
      */
     protected Object executeJavaScript(String script, Object... args) {
         if (driver instanceof JavascriptExecutor) {

@@ -1,18 +1,24 @@
 package com.uiplayground.automation.pages.playground;
 
+import com.uiplayground.automation.annotations.ElementName;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import java.util.List;
+import org.openqa.selenium.NoSuchElementException;
 /**  
  * Page object for UI Testing Playground homepage
 */
 public class HomePage extends BasePage {
     
+    @ElementName("Page Title")
     @FindBy(css = ".container h1")
     private WebElement pageTitle;
 
-    // A list of links for the available test scenarios
+    @ElementName("Test Scenario Links")
     @FindBy(css = ".container .row a.btn")
     private List<WebElement> testLinks;
 
-    /** 
+    /**
      * Navigate to the homepage
      * @return HomePage instance
      */
@@ -26,18 +32,18 @@ public class HomePage extends BasePage {
      * @return Title text
      */
     public String getPageTitleText() {
-        return getText(pageTitle, "Page Title");
+        return getText(pageTitle);
     }
 
     /**
      * Click on a specific test scenario link by name
      * @param linkText The text of the link to click
-     * @return HomePage instance for now (will be updated to return specific page objects)
+     * @return HomePage instance
      */
     public HomePage clickTestLink(String linkText) {
         for (WebElement link : testLinks) {
             if (link.getText().trim().equals(linkText)) {
-                click(link, "Test Link: " + linkText);
+                click(link);
                 return this;
             }
         }
@@ -46,12 +52,10 @@ public class HomePage extends BasePage {
     }
 
     /**
-     * Get the number of test scenarios available on the homepage
+     * Get the number of test scenarios available
      * @return Number of test scenario links
      */
     public int getTestLinkCount() {
         return testLinks.size();
     }
-
-     
 }
