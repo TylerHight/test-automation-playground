@@ -1,9 +1,12 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="UI Testing Playground Suite" parallel="tests" thread-count="2">
-    <test name="Basic Tests">
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="UI Test Automation Suite" parallel="false">
+    <listeners>
+        <listener class-name="com.uiplayground.automation.core.reporting.TestListener"/>
+    </listeners>
+    
+    <test name="Homepage Tests">
         <classes>
-            <!-- Add your test classes here as you create them -->
-            <!-- Example: <class name="com.uiplayground.automation.tests.playground.DynamicIdTests"/> -->
+            <class name="com.uiplayground.automation.runners.HomePageTestRunner"/>
         </classes>
     </test>
 </suite>

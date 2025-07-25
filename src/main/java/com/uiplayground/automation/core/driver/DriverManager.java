@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.uiplayground.automation.core.config.ConfigManager;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,16 +16,17 @@ import org.apache.logging.log4j.Logger;
  * Uses ThreadLocal to support parallel test execution
  */
 public class DriverManager {
-    
+
     private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     private static final Logger logger = LogManager.getLogger(DriverManager.class);
-    
+
     private DriverManager() {
         // Private constructor to prevent instantiation
     }
-    
+
     /**
      * Get the WebDriver instance for the current thread
+     * 
      * @return WebDriver instance
      */
     public static WebDriver getDriver() {
@@ -31,14 +35,21 @@ public class DriverManager {
         }
         return driver.get();
     }
-    
+
     /**
      * Initialize a new WebDriver instance based on browser configuration
      */
     public static void initializeDriver() {
-        String browser = System.getProperty("browser", "chrome").toLowerCase();
+        logger.info("Initializing WebDriver");
+
+        String browser = ConfigManager.getInstance().getBrowser();
+        if (browser == null) {
+            browser = "chrome"; // Default fallback
+        }
+
+        browser = browser.toLowerCase();
         logger.info("Initializing WebDriver for browser: " + browser);
-        
+
         switch (browser) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
@@ -52,11 +63,11 @@ public class DriverManager {
                 WebDriverManager.chromedriver().setup();
                 driver.set(new ChromeDriver());
         }
-        
+
         driver.get().manage().window().maximize();
         logger.info("WebDriver initialized successfully");
     }
-    
+
     /**
      * Quit the WebDriver instance and remove it from ThreadLocal
      */

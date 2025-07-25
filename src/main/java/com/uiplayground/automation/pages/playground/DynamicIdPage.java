@@ -1,15 +1,17 @@
 package com.uiplayground.automation.pages.playground;
 
+import com.uiplayground.automation.core.annotations.ElementName;
+import com.uiplayground.automation.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DynamicIdPage extends BasePage {
     
-    @ElementName("Dynamic ID Button");
+    @ElementName("Dynamic ID Button")
     @FindBy(xpath = "//button[text()='Button with Dynamic ID']")
     private WebElement dynamicIdButton;
 
-    @ElementName("Page Header");
+    @ElementName("Page Header")
     @FindBy(xpath = "//h3[normalize-space()='Dynamic ID']")
     private WebElement pageHeader;
 
@@ -18,7 +20,7 @@ public class DynamicIdPage extends BasePage {
      * @return true if on the correct page
      */
     public boolean isOnPage() {
-        return getText(pageHeader, "Page Header").equals("Dynamic ID");
+        return getText(pageHeader).equals("Dynamic ID");
     }
 
     /**

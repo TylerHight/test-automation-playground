@@ -1,6 +1,6 @@
 package com.uiplayground.automation.pages.base;
 
-import com.uiplayground.automation.annotations.ElementName;
+import com.uiplayground.automation.core.annotations.ElementName;
 import com.uiplayground.automation.core.config.ConfigManager;
 import com.uiplayground.automation.core.driver.DriverManager;
 import org.apache.logging.log4j.LogManager;

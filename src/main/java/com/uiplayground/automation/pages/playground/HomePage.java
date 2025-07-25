@@ -1,8 +1,12 @@
 package com.uiplayground.automation.pages.playground;
 
-import com.uiplayground.automation.annotations.ElementName;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import com.uiplayground.automation.core.annotations.ElementName;
+import com.uiplayground.automation.core.config.ConfigManager;
+import com.uiplayground.automation.pages.base.BasePage;
+
 import java.util.List;
 import org.openqa.selenium.NoSuchElementException;
 /**  
