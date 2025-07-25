@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="7.008" tests="2" skipped="0" failures="2" errors="0">
-<testcase classname="Homepage functionality" name="Verify homepage loads with correct title" time="3.544">
-<failure type="io.cucumber.java.PendingException" message="TODO: implement me">
-<![CDATA[io.cucumber.java.PendingException: TODO: implement me
-	at com.uiplayground.automation.steps.HomePageSteps.i_navigate_to_the_homepage(HomePageSteps.java:19)
-	at ✽.I navigate to the homepage(file:///C:/Development/Projects/Portfolio%20Projects/qa-automation-playground/qa-playground/src/test/resources/features/homepage.feature:8)
-]]>
-</failure>
+<testsuite name="Cucumber" time="4.89" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage functionality" name="Verify homepage loads with correct title" time="4.002">
 <system-out><![CDATA[
-Given I navigate to the homepage............................................pending
-When I view the page title..................................................skipped
-Then the page title should be displayed correctly...........................skipped
-And the page title should not be empty......................................skipped
-]]></system-out>
-</testcase>
-<testcase classname="Homepage functionality" name="Verify test scenario links are available" time="2.262">
-<failure type="io.cucumber.java.PendingException" message="TODO: implement me">
-<![CDATA[io.cucumber.java.PendingException: TODO: implement me
-	at com.uiplayground.automation.steps.HomePageSteps.i_navigate_to_the_homepage(HomePageSteps.java:19)
-	at ✽.I navigate to the homepage(file:///C:/Development/Projects/Portfolio%20Projects/qa-automation-playground/qa-playground/src/test/resources/features/homepage.feature:15)
-]]>
-</failure>
-<system-out><![CDATA[
-Given I navigate to the homepage............................................pending
-When I check the available test links.......................................skipped
-Then I should see test scenario links on the page...........................skipped
+Given I navigate to the homepage............................................passed
+When I view the page title..................................................passed
+Then the page title should be displayed correctly...........................passed
+And the page title should not be empty......................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-25T12:50:09 CDT" name="Surefire suite" finished-at="2025-07-25T12:50:17 CDT" duration-ms="7450">
+  <suite started-at="2025-07-25T15:13:24 CDT" name="Surefire suite" finished-at="2025-07-25T15:13:29 CDT" duration-ms="5256">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-07-25T12:50:09 CDT" name="Surefire test" finished-at="2025-07-25T12:50:17 CDT" duration-ms="7450">
+    <test started-at="2025-07-25T15:13:24 CDT" name="Surefire test" finished-at="2025-07-25T15:13:29 CDT" duration-ms="5256">
       <class name="com.uiplayground.automation.runners.HomePageTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T12:50:09 CDT" name="setUpClass" finished-at="2025-07-25T12:50:10 CDT" duration-ms="1113" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T15:13:24 CDT" name="setUpClass" finished-at="2025-07-25T15:13:25 CDT" duration-ms="845" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3d1c933]]>
+                <![CDATA[org.testng.TestRunner@73e4bb60]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T12:50:10 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T12:50:14 CDT" duration-ms="3643" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T15:13:25 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T15:13:29 CDT" duration-ms="4079" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -34,48 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="io.cucumber.java.PendingException">
-            <message>
-              <![CDATA[TODO: implement me]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
-at com.uiplayground.automation.steps.HomePageSteps.i_navigate_to_the_homepage(HomePageSteps.java:19)
-at ✽.I navigate to the homepage(file:///C:/Development/Projects/Portfolio%20Projects/qa-automation-playground/qa-playground/src/test/resources/features/homepage.feature:8)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.PendingException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T12:50:14 CDT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-25T12:50:16 CDT" duration-ms="2264" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Verify test scenario links are available"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Homepage functionality"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="io.cucumber.java.PendingException">
-            <message>
-              <![CDATA[TODO: implement me]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[io.cucumber.java.PendingException: TODO: implement me
-at com.uiplayground.automation.steps.HomePageSteps.i_navigate_to_the_homepage(HomePageSteps.java:19)
-at ✽.I navigate to the homepage(file:///C:/Development/Projects/Portfolio%20Projects/qa-automation-playground/qa-playground/src/test/resources/features/homepage.feature:15)
-]]>
-            </full-stacktrace>
-          </exception> <!-- io.cucumber.java.PendingException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T12:50:16 CDT" name="tearDownClass" finished-at="2025-07-25T12:50:17 CDT" duration-ms="394" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.uiplayground.automation.runners.HomePageTestRunner@4b0b0854]" started-at="2025-07-25T15:13:29 CDT" name="tearDownClass" finished-at="2025-07-25T15:13:29 CDT" duration-ms="298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

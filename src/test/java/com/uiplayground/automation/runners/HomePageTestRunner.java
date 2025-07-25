@@ -17,6 +17,5 @@ import io.cucumber.testng.CucumberOptions;
     },
     tags = "@smoke or @homepage"
 )
-
 public class HomePageTestRunner extends AbstractTestNGCucumberTests {
 }
