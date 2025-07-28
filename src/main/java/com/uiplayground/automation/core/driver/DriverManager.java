@@ -3,8 +3,11 @@ package com.uiplayground.automation.core.driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.uiplayground.automation.core.config.ConfigManager;
 
@@ -43,25 +46,52 @@ public class DriverManager {
         logger.info("Initializing WebDriver");
 
         String browser = ConfigManager.getInstance().getBrowser();
+        boolean headless = ConfigManager.getInstance().isHeadless();
+
         if (browser == null) {
             browser = "chrome"; // Default fallback
         }
 
         browser = browser.toLowerCase();
-        logger.info("Initializing WebDriver for browser: " + browser);
+        logger.info("Initializing WebDriver for browser: {} (headless: {})", browser, headless);
 
         switch (browser) {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver.set(new FirefoxDriver());
+                if (headless) {
+                    FirefoxOptions firefoxOptions = new FirefoxOptions();
+                    firefoxOptions.addArguments("--headless");
+                    driver.set(new FirefoxDriver(firefoxOptions));
+                    logger.info("Firefox started in headless mode");
+                } else {
+                    driver.set(new FirefoxDriver());
+                }
                 break;
+
             case "edge":
                 WebDriverManager.edgedriver().setup();
-                driver.set(new EdgeDriver());
+                if (headless) {
+                    EdgeOptions edgeOptions = new EdgeOptions();
+                    edgeOptions.addArguments("--headless");
+                    driver.set(new EdgeDriver(edgeOptions));
+                    logger.info("Edge started in headless mode");
+                } else {
+                    driver.set(new EdgeDriver());
+                }
                 break;
-            default:
+
+            default: // Chrome
                 WebDriverManager.chromedriver().setup();
-                driver.set(new ChromeDriver());
+                if (headless) {
+                    ChromeOptions chromeOptions = new ChromeOptions();
+                    chromeOptions.addArguments("--headless");
+                    chromeOptions.addArguments("--disable-gpu"); // Recommended for headless
+                    chromeOptions.addArguments("--window-size=1920,1080"); // Set resolution
+                    driver.set(new ChromeDriver(chromeOptions));
+                    logger.info("Chrome started in headless mode");
+                } else {
+                    driver.set(new ChromeDriver());
+                }
         }
 
         driver.get().manage().window().maximize();

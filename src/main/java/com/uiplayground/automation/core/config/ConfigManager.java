@@ -44,6 +44,17 @@ public class ConfigManager {
     }
 
     /**
+     * Get a property with default value if not found
+     * 
+     * @param key Property key
+     * @param defaultValue Default value if property is not found
+     * @return Property value or default
+     */
+    public String getProperty(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
+    }
+
+    /**
      * Get a property value by key
      * 
      * @param key Property key
@@ -60,6 +71,20 @@ public class ConfigManager {
      */
     public String getBaseUrl() {
         return getProperty("baseUrl");
+    }
+
+    /**
+     * Check if headless browser mode is enabled
+     * 
+     * @return true if headless mode is enabled
+     */
+    public boolean isHeadless() {
+        // Allow override via system property
+        String sysProp = System.getProperty("headless");
+        if (sysProp != null) {
+            return Boolean.parseBoolean(sysProp);
+        }
+        return Boolean.parseBoolean(getProperty("headless", "false"));
     }
 
     /**
@@ -128,3 +153,4 @@ public class ConfigManager {
     }
 
 }
+
