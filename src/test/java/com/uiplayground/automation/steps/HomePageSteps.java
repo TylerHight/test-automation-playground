@@ -51,11 +51,11 @@ public class HomePageSteps {
         AssertionUtils.assertNotNullOrEmpty(actualTitle, "Page Title");
     }
 
-    // @When("I check the available test links")
-    // public void i_check_the_available_test_links() {
-    // }
+    @When("I check the available test links")
+    public void i_check_the_available_test_links() {
+    }
 
-    // @Then("I should see test scenario links on the page")
-    // public void i_should_see_test_scenario_links_on_the_page() {
-    // }
+    @Then("I should see test scenario links on the page")
+    public void i_should_see_test_scenario_links_on_the_page() {
+    }
 }

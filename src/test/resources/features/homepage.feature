@@ -10,8 +10,8 @@ Feature: Homepage functionality
     Then the page title should be displayed correctly
     And the page title should not be empty
 
-  # @regression @homepage
-  # Scenario: Verify test scenario links are available
-  #   Given I navigate to the homepage
-  #   When I check the available test links
-  #   Then I should see test scenario links on the page
+  @regression @homepage
+  Scenario: Verify test scenario links are available
+    Given I navigate to the homepage
+    When I check the available test links
+    Then I should see test scenario links on the page
