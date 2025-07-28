@@ -2,6 +2,8 @@ package com.uiplayground.automation.pages.playground;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 import com.uiplayground.automation.core.annotations.ElementName;
 import com.uiplayground.automation.core.config.ConfigManager;
 import com.uiplayground.automation.constants.pages.HomePageConstants;
@@ -20,6 +22,10 @@ public class HomePage extends BasePage {
     @ElementName("Test Scenario Links")
     @FindBy(css = HomePageSelectors.TEST_LINKS)
     private List<WebElement> testLinks;
+
+    public HomePage() {
+        super();
+    }
 
     public HomePage open() {
         navigateTo(ConfigManager.getInstance().getBaseUrl());

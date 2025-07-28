@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="17.453" tests="2" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage functionality" name="Verify homepage loads with correct title" time="13.586">
-<system-out><![CDATA[
-Given I navigate to the homepage............................................passed
-When I view the page title..................................................passed
-Then the page title should be displayed correctly...........................passed
-And the page title should not be empty......................................passed
-]]></system-out>
-</testcase>
-<testcase classname="Homepage functionality" name="Verify test scenario links are available" time="2.961">
+<testsuite name="Cucumber" time="14.694" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage functionality" name="Verify test scenario links are available" time="13.674">
 <system-out><![CDATA[
 Given I navigate to the homepage............................................passed
 When I check the available test links.......................................passed

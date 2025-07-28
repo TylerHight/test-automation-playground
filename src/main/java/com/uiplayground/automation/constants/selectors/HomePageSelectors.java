@@ -8,7 +8,7 @@ public final class HomePageSelectors {
     // Main Page Elements
     public static final String PAGE_TITLE = ".container h1";
     public static final String PAGE_DESCRIPTION = ".container p";
-    public static final String TEST_LINKS = ".container .row a.btn";
+    public static final String TEST_LINKS = ".container .row .col-sm h3 a";
     
     // Specific Link Selectors
     public static final String DYNAMIC_ID_LINK = "a[href*='dynamicid']";

@@ -10,3 +10,6 @@ import io.cucumber.testng.CucumberOptions;
 public abstract class BaseTestRunner extends AbstractTestNGCucumberTests {
     // Common configurations or overrides can go here
 }
+
+// Command to run dev tests (tests that are currently being developed): 
+// mvn test "-Dcucumber.filter.tags=@dev" "-Dtest=<TestRunnerName>"

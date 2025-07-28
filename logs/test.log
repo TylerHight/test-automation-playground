@@ -468,3 +468,196 @@ Playground
 10:57:51.810 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
 10:57:51.813 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
 10:57:52.022 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+11:27:01.822 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+11:27:01.884 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+11:27:01.891 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+11:27:02.175 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:27:02.202 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:27:02.202 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:27:06.452 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:27:06.486 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:27:06.491 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify homepage loads with correct title
+11:27:06.491 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify homepage loads with correct title
+11:27:06.538 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:27:07.542 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:27:07.544 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Retrieving page title
+11:27:07.616 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Got text from Unknown Element: UI Test Automation
+Playground
+11:27:07.617 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating the page title content
+11:27:07.618 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting title - Expected: 'UI Test Automation Playground', Actual: 'UI Test Automation Playground'
+11:27:07.620 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that the page title is not empty
+11:27:07.620 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Validated Page Title is not null or empty
+11:27:07.623 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario passed: Verify homepage loads with correct title
+11:27:07.624 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:27:07.624 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:27:07.776 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:27:07.786 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:27:07.786 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:27:07.786 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:27:10.343 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:27:10.368 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:27:10.369 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+11:27:10.369 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+11:27:10.391 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:27:11.154 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:27:11.155 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+11:27:11.170 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying correct number of test scenario links
+11:27:11.187 [main] ERROR com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario failed: Verify test scenario links are available
+11:27:11.276 [main] INFO  com.uiplayground.automation.core.reporting.ScreenshotManager - Screenshot saved to: reports\screenshots\Verify_test_scenario_links_are_available_20250728_112711.png
+11:27:11.281 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:27:11.281 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:27:11.426 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:27:11.431 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+11:27:11.627 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+11:37:19.882 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+11:37:19.890 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+11:37:19.894 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+11:37:20.062 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:37:20.063 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:37:20.063 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:37:32.901 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:37:32.945 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:37:32.955 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify homepage loads with correct title
+11:37:32.956 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify homepage loads with correct title
+11:37:33.092 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:37:33.889 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:37:33.893 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Retrieving page title
+11:37:34.003 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Got text from Unknown Element: UI Test Automation
+Playground
+11:37:34.005 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating the page title content
+11:37:34.008 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting Title - Expected: 'UI Test Automation Playground', Actual: 'UI Test Automation Playground'
+11:37:34.014 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that the page title is not empty
+11:37:34.014 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting Page Title - Expected: 'not null or empty', Actual: 'UI Test Automation Playground'
+11:37:34.018 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario passed: Verify homepage loads with correct title
+11:37:34.020 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:37:34.021 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:37:34.179 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:37:34.188 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:37:34.188 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:37:34.188 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:37:36.408 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:37:36.434 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:37:36.436 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+11:37:36.437 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+11:37:36.469 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:37:37.271 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:37:37.273 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+11:37:37.286 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying test scenario links on the page
+11:37:37.286 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting test scenario links count - Expected: '18', Actual: '0'
+11:37:37.292 [main] ERROR com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario failed: Verify test scenario links are available
+11:37:37.352 [main] INFO  com.uiplayground.automation.core.reporting.ScreenshotManager - Screenshot saved to: reports\screenshots\Verify_test_scenario_links_are_available_20250728_113737.png
+11:37:37.354 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:37:37.354 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:37:37.485 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:37:37.490 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+11:37:37.707 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+11:40:38.599 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+11:40:38.654 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+11:40:38.659 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+11:40:38.885 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:40:38.912 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:40:38.912 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:40:43.883 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:40:43.927 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:40:43.933 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify homepage loads with correct title
+11:40:43.933 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify homepage loads with correct title
+11:40:43.988 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:40:44.989 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:40:44.993 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Retrieving page title
+11:40:45.103 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Got text from Unknown Element: UI Test Automation
+Playground
+11:40:45.105 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating the page title content
+11:40:45.108 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting Title - Expected: 'UI Test Automation Playground', Actual: 'UI Test Automation Playground'
+11:40:45.113 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that the page title is not empty
+11:40:45.113 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting Page Title - Expected: 'not null or empty', Actual: 'UI Test Automation Playground'
+11:40:45.114 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario passed: Verify homepage loads with correct title
+11:40:45.115 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:40:45.115 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:40:45.303 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:40:45.313 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:40:45.313 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:40:45.313 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:40:51.156 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:40:51.180 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:40:51.180 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+11:40:51.181 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+11:40:51.203 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:40:51.935 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:40:51.936 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+11:40:51.947 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying test scenario links on the page
+11:40:51.948 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting test scenario links count - Expected: '18', Actual: '0'
+11:40:51.951 [main] ERROR com.uiplayground.automation.utils.AssertionUtils - ❌ test scenario links count assertion failed - Expected: '18', Actual: '0' - Expected 18 test scenario links but found 0 expected [18] but found [0]
+11:40:51.957 [main] ERROR com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario failed: Verify test scenario links are available
+11:40:52.045 [main] INFO  com.uiplayground.automation.core.reporting.ScreenshotManager - Screenshot saved to: reports\screenshots\Verify_test_scenario_links_are_available_20250728_114051.png
+11:40:52.048 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:40:52.048 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:40:52.169 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:40:52.174 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+11:40:52.380 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+11:49:24.901 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+11:49:24.908 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+11:49:24.918 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+11:49:25.160 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+11:49:25.161 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+11:49:25.161 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+11:49:28.290 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+11:49:28.319 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+11:49:28.324 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+11:49:28.324 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+11:49:28.380 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+11:49:29.405 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+11:49:29.407 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+11:49:29.421 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying test scenario links on the page
+11:49:29.422 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting test scenario links count - Expected: '18', Actual: '0'
+11:49:29.428 [main] ERROR com.uiplayground.automation.utils.AssertionUtils - ❌ test scenario links count assertion failed - Expected: '18', Actual: '0' - Expected 18 test scenario links but found 0 expected [18] but found [0]
+11:49:29.438 [main] ERROR com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario failed: Verify test scenario links are available
+11:49:29.489 [main] INFO  com.uiplayground.automation.core.reporting.ScreenshotManager - Screenshot saved to: reports\screenshots\Verify_test_scenario_links_are_available_20250728_114929.png
+11:49:29.492 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+11:49:29.493 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+11:49:29.659 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+11:49:29.671 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+11:49:29.888 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+12:01:59.533 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+12:01:59.563 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+12:01:59.567 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+12:01:59.807 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+12:01:59.808 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+12:01:59.808 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+12:02:05.449 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+12:02:05.495 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+12:02:05.501 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+12:02:05.501 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+12:02:05.567 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+12:02:06.473 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+12:02:06.477 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+12:02:06.500 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying test scenario links on the page
+12:02:06.502 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting test scenario links count - Expected: '21', Actual: '23'
+12:02:06.508 [main] ERROR com.uiplayground.automation.utils.AssertionUtils - ❌ test scenario links count assertion failed - Expected: '21', Actual: '23' - Expected 21 test scenario links but found 23 expected [21] but found [23]
+12:02:06.517 [main] ERROR com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario failed: Verify test scenario links are available
+12:02:06.583 [main] INFO  com.uiplayground.automation.core.reporting.ScreenshotManager - Screenshot saved to: reports\screenshots\Verify_test_scenario_links_are_available_20250728_120206.png
+12:02:06.587 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+12:02:06.587 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+12:02:06.856 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+12:02:06.868 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+12:02:07.140 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully
+12:02:45.109 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Initializing test suite reports
+12:02:45.118 [main] INFO  com.uiplayground.automation.core.config.ConfigManager - Configuration loaded successfully from classpath: /config.properties
+12:02:45.124 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports initialized successfully at: reports/extent-reports/test-report.html
+12:02:45.355 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Setting up test scenario - initializing WebDriver
+12:02:45.357 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver
+12:02:45.358 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Initializing WebDriver for browser: chrome (headless: true)
+12:02:57.800 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Chrome started in headless mode
+12:02:57.836 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver initialized successfully
+12:02:57.843 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Starting Cucumber scenario: Verify test scenario links are available
+12:02:57.843 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - Created test in report: Verify test scenario links are available
+12:02:57.908 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Navigating to homepage
+12:02:58.352 [main] INFO  com.uiplayground.automation.pages.playground.HomePage - Navigated to URL: http://www.uitestingplayground.com
+12:02:58.358 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Validating that home page test links are available
+12:02:58.813 [main] INFO  com.uiplayground.automation.steps.HomePageSteps - Verifying test scenario links on the page
+12:02:58.814 [main] INFO  com.uiplayground.automation.utils.AssertionUtils - Asserting test scenario links count - Expected: '23', Actual: '23'
+12:02:58.819 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Cucumber scenario passed: Verify test scenario links are available
+12:02:58.820 [main] INFO  com.uiplayground.automation.hooks.TestSetupHooks - Tearing down test scenario - quitting WebDriver
+12:02:58.820 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - Quitting WebDriver
+12:02:58.972 [main] INFO  com.uiplayground.automation.core.driver.DriverManager - WebDriver quit successfully
+12:02:58.980 [main] INFO  com.uiplayground.automation.hooks.ReportingHooks - Finalizing test suite reports
+12:02:59.196 [main] INFO  com.uiplayground.automation.core.reporting.ReportManager - ExtentReports flushed successfully

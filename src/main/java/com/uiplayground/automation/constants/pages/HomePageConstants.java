@@ -14,6 +14,5 @@ public final class HomePageConstants {
     public static final String DYNAMIC_ID_LINK_TITLE = "Dynamic ID";
     
     // Expected Counts
-    public static final int EXPECTED_LINK_COUNT = 18;
-    public static final int EXPECTED_SCENARIOS_COUNT = 18;
+    public static final int EXPECTED_LINK_COUNT = 23; // Number of available test links on the homepage
 }

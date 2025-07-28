@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.Assert;
 
 public class HomePageSteps {
 
@@ -54,11 +55,19 @@ public class HomePageSteps {
     }
 
     @When("I check the available test links")
-    public void i_check_the_available_test_links() { 
+    public void i_check_the_available_test_links() {
         logger.info("Validating that home page test links are available");
+        linkCount = homePage.getTestLinkCount();
+        logger.debug("Found {} test scenario links on homepage", linkCount);
     }
 
     @Then("I should see test scenario links on the page")
     public void i_should_see_test_scenario_links_on_the_page() {
+        logger.info("Verifying test scenario links on the page");
+        AssertionUtils.assertElementCount(
+                linkCount,
+                HomePageConstants.EXPECTED_LINK_COUNT,
+                "test scenario links");
     }
+
 }

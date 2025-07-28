@@ -12,4 +12,7 @@ public final class ValidationMessages {
     
     // Title Validation
     public static final String TITLE_VERIFICATION_FAILED = "Page title verification failed: expected '%s' but got '%s'";
+    
+    // Count Validation
+    public static final String COUNT_MISMATCH = "Expected %d %s but found %d";
 }
