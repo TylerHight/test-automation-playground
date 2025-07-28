@@ -6,7 +6,7 @@
       <class name="com.uiplayground.automation.runners.HomePageTestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
+          <include name="runScenario" invocation-numbers="0 1"/>
           <include name="tearDownClass"/>
         </methods>
       </class> <!-- com.uiplayground.automation.runners.HomePageTestRunner -->

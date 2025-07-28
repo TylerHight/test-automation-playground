@@ -1,4 +1,9 @@
 C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\hooks\TestSetupHooks.java
-C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\HomePageTestRunner.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\RegressionTestRunner.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\ui\HomePageTestRunner.java
 C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\steps\HomePageSteps.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\api\APITestRunner.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\SmokeTestRunner.java
 C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\hooks\ReportingHooks.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\BaseTestRunner.java
+C:\Development\Projects\Portfolio Projects\qa-automation-playground\qa-playground\src\test\java\com\uiplayground\automation\runners\ui\UITestRunner.java

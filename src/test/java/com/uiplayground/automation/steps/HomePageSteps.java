@@ -2,7 +2,6 @@ package com.uiplayground.automation.steps;
 
 import com.uiplayground.automation.constants.messages.ValidationMessages;
 import com.uiplayground.automation.constants.pages.HomePageConstants;
-import com.uiplayground.automation.core.config.ConfigManager;
 import com.uiplayground.automation.pages.playground.HomePage;
 import com.uiplayground.automation.utils.AssertionUtils;
 
@@ -12,7 +11,6 @@ import io.cucumber.java.en.Then;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.testng.Assert;
 
 public class HomePageSteps {
 
@@ -22,10 +20,14 @@ public class HomePageSteps {
     private String actualTitle;
     private int linkCount;
 
+    public HomePageSteps(HomePage homePage) {
+        this.homePage = homePage;
+    }
+
     @Given("I navigate to the homepage")
     public void i_navigate_to_the_homepage() {
         logger.info("Navigating to homepage");
-        homePage = new HomePage().open();
+        homePage.open();
     }
 
     @When("I view the page title")
@@ -52,7 +54,8 @@ public class HomePageSteps {
     }
 
     @When("I check the available test links")
-    public void i_check_the_available_test_links() {
+    public void i_check_the_available_test_links() { 
+        logger.info("Validating that home page test links are available");
     }
 
     @Then("I should see test scenario links on the page")

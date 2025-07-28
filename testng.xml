@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="UI Test Automation Suite" parallel="false">
+<suite name="UI Test Automation Suite" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="com.uiplayground.automation.core.reporting.TestListener"/>
     </listeners>
     
+    <!-- UI Tests -->
     <test name="Homepage Tests">
         <classes>
-            <class name="com.uiplayground.automation.runners.HomePageTestRunner"/>
+            <class name="com.uiplayground.automation.runners.ui.HomePageTestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- API Tests -->
+    <test name="API Tests">
+        <classes>
+            <class name="com.uiplayground.automation.runners.api.APITestRunner"/>
+        </classes>
+    </test>
+    
+    <!-- Cross-cutting Tests -->
+    <test name="Smoke Tests">
+        <classes>
+            <class name="com.uiplayground.automation.runners.SmokeTestRunner"/>
         </classes>
     </test>
 </suite>

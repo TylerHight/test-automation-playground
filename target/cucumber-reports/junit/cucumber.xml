@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="4.89" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Homepage functionality" name="Verify homepage loads with correct title" time="4.002">
+<testsuite name="Cucumber" time="14.131" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Homepage functionality" name="Verify homepage loads with correct title" time="5.255">
 <system-out><![CDATA[
 Given I navigate to the homepage............................................passed
 When I view the page title..................................................passed
 Then the page title should be displayed correctly...........................passed
 And the page title should not be empty......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Homepage functionality" name="Verify test scenario links are available" time="7.823">
+<system-out><![CDATA[
+Given I navigate to the homepage............................................passed
+When I check the available test links.......................................passed
+Then I should see test scenario links on the page...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>
